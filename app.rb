@@ -61,7 +61,7 @@ get "/loser" do
 	player1 = params[:player1]
 	player2 = params[:player2]
 
-	erb :loser, locals:{p1_name: player1, p2_name: player2,word: session[:game].name}
+	erb :loser,layout: :loser, locals:{p1_name: player1, p2_name: player2,word: session[:game].name}
 end
 get "/winner" do
 	player1 = params[:player1]
